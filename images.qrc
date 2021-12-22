@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/smile.png</file>
+        <file>images/apple.png</file>
+        <file>images/banana.png</file>
+        <file>images/cantaloupe.png</file>
+        <file>images/durian.png</file>
+        <file>images/elderberry.png</file>
+        <file>images/fig.png</file>
+        <file>images/grapefruit.png</file>
+        <file>images/horned_melon.png</file>
+        <file>images/indianprune.png</file>
+        <file>images/jackfruit.png</file>
+    </qresource>
+</RCC>

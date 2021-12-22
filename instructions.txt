@@ -1,0 +1,87 @@
+=======================INSTRUCTIONS FOR MEMORY GAME (PAIRS)=====================
+
+--------------------------------------------------------------------------------
+                                 GAME RULES
+--------------------------------------------------------------------------------
+Pairs memory game is a simple card game. Players take turns in picking a card 
+and trying to combine it with another similiar card. Game is played until all
+cards have been picked. At the end of the game, the player with most pairs will
+be declared as the winner. Game can also end in a tie of two players. If this
+happens, both players will be announced as winners.
+
+
+-------------------------------------------------------------------------------
+                                GAME INSTRUCTIONS
+-------------------------------------------------------------------------------
+
+Upon running this game, the user has three input boxes available: card amount,
+seed value and player amount.
+The program demands valid inputs before continuing, this is implemented by
+disabling start button until player gives correct values. If a user gives
+invalid inputs, an error message will be shown on a text box which is located on
+the top of the program. When player gives correct values, a list of input boxes
+appear on the left side of the window. The player can add player names through
+these inputs. There are as many boxes as there are players.
+
+After filling these basic informations, the user can click start button which 
+starts the actual game. After clicking, the program forms a grid of cards which 
+are backside up. Program also informs which player is in turn. This player can 
+click on a card to reveal what is underneath. After this the player can choose a
+second card which is compared on the first card. If the cards match, the player 
+gains a pair and can continue. Then again if player chooses a wrong card, player 
+has to click on the hide cards button to reset the cards to their default state.
+After hiding the cards the turn will be given to the next player. This same 
+formula is continued until all the cards have been chosen. When the whole board 
+is empty, the player points are compared and the winner will be announced with 
+the amount of pairs the player had. In addition to this, if there happens to be 
+a tie, the game will announce the amount of players in a tie and the amount of 
+pairs.
+
+Player can close the program at anytime using close button which is located on 
+the top right corner of the program.
+
+
+-------------------------------------------------------------------------------
+                            ADDITIONAL FEATURES
+-------------------------------------------------------------------------------
+
+- The user can modify the amount of players by submitting a player amount to a
+  input box in the beginning of the program.
+- The user can give names to players after clicking confirm button. These names
+  can be given by a LineEdit box on the left side of the window.
+- The backside of the cards have a similiar picture which is a nice smiley :).
+- Instead of letters the cards contain a picture of fruits when the card is
+  turned.
+
+
+-------------------------------------------------------------------------------
+                                DESIGN PROCESS
+-------------------------------------------------------------------------------
+
+At first I began planning this program with a similiar way as the week 4 pairs
+game. Soon I noticed that this is a bit different in sense that this program
+doesn't need a game loop to run. This program is ran completely by user clicks
+which made the game logic much simpler.
+
+I decided to use QGeometryView instead of central_widget, because I didn't need
+scaling on this program and setGeometry was really easy to implement.
+
+Also I switched the datastructure from a vector which contained Card* pointers
+inside another vector to a much simpler single vector which contained the same
+pointers. This is because this version of the game doesn't require coordinates 
+so x and y axis are useless and make the game much more complicated. The pair
+checking was also a bit confusing at start, but when I figured out that I could
+use temporary vector to compare cards, thing started rolling nicely.
+
+At first I thought I would make a simple game with letters, but then I did
+some research in QT documentation and found out that actually adding pictures
+isn't that impossible so I implemented that to the cards. 
+
+I feel that I had nice logical datastructure so I could modify my program
+easily. Also the week 4 pairs game helped a bit. In addition to this the
+typewriter example helped a lot in figuring out how pushbuttons can be
+implemented to the program.
+
+
+
+
